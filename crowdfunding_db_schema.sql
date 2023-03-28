@@ -38,7 +38,7 @@ FROM contacts
 -- campaign
 
 CREATE TABLE campaign(
-	cf_id INT PRIMARY KEY NOT NULL,
+    cf_id INT PRIMARY KEY NOT NULL,
     contact_id INT NOT NULL,
     company_name VARCHAR NOT NULL,
     description VARCHAR(200) NOT NULL,
@@ -52,9 +52,9 @@ CREATE TABLE campaign(
     end_date DATE NOT NULL,
     category_id VARCHAR(10) NOT NULL,
     subcategory_id VARCHAR(10) NOT NULL,
-	FOREIGN KEY(contact_id) REFERENCES contacts(contact_id),
-	FOREIGN KEY(category_id) REFERENCES category(category_id),
-	FOREIGN KEY(subcategory_id) REFERENCES subcategory(subcategory_id)
+   FOREIGN KEY(contact_id) REFERENCES contacts(contact_id),
+   FOREIGN KEY(category_id) REFERENCES category(category_id), 
+   FOREIGN KEY(subcategory_id) REFERENCES subcategory(subcategory_id)
 );
 
 SELECT*
